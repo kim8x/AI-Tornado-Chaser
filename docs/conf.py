@@ -11,28 +11,38 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'myst_parser',  # for Markdown support
-    'sphinx.ext.intersphinx',
+    'myst_parser',
     'sphinx_rtd_theme',
 ]
 
-templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+# Configuration for myst_parser
+myst_enable_extensions = [
+    "colon_fence",
+    "deflist"
+]
 
-html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
-
-# Language settings
-language = 'fr'
-locale_dirs = ['locale/']   # path is example but recommended
-gettext_compact = False     # optional
-gettext_uuid = True        # optional
-
-# Source file parsers
+# Source parsing
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.md': 'myst'
+    '.md': 'markdown',
 }
 
 # The master toctree document
-master_doc = 'contents'
+master_doc = 'index'
+
+# Language settings
+language = 'fr'
+locale_dirs = ['locale/']
+gettext_compact = False
+
+# Theme configuration
+html_theme = 'sphinx_rtd_theme'
+html_static_path = ['_static']
+templates_path = ['_templates']
+
+# Files to ignore
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+# Other settings
+nitpicky = True
+smartquotes = False
