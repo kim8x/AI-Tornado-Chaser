@@ -1,4 +1,4 @@
-# Minimal makefile for Sphinx
+# Minimal makefile for Sphinx documentation
 
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
@@ -12,3 +12,6 @@ help:
 
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+livehtml:
+	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS) $(O)

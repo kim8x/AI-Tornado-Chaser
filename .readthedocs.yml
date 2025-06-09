@@ -12,9 +12,3 @@ python:
 
 sphinx:
   configuration: docs/conf.py
-
-# Optionally, set the documentation build output directory
-# formats:
-#   - html
-#   - pdf
-#   - epub
