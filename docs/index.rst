@@ -1,82 +1,80 @@
-AI Tornado Chaser Documentation
-==============================
+AI-Tornado-Chaser Documentation
+============================
+
+Welcome to the AI-Tornado-Chaser documentation. This comprehensive system combines advanced machine learning with intelligent assistance for natural disaster management, specifically focusing on tornado trajectory prediction and safety guidance.
+
+Project Overview
+-------------
+
+AI-Tornado-Chaser is an advanced system that:
+
+* Predicts tornado trajectories using deep learning
+* Provides real-time safety guidance through an intelligent chatbot
+* Analyzes historical data from 2,489 tornadoes (1949-2023)
+* Implements state-of-the-art machine learning models
+* Offers REST API for real-time predictions
+
+Key Features
+----------
+
+1. **Trajectory Prediction**
+   * BiLSTM-based sequence prediction
+   * Multi-step forecasting
+   * High accuracy positioning
+
+2. **Intelligent Chatbot**
+   * NLP-powered responses
+   * Real-time safety advice
+   * Context-aware assistance
+
+3. **Data Analysis**
+   * Historical pattern recognition
+   * Trend analysis
+   * Interactive visualizations
+
+4. **API Integration**
+   * RESTful endpoints
+   * Real-time predictions
+   * Easy integration options
+
+Caractéristiques principales
+----------------------------
+
+* **Prédiction de trajectoires** : Modèles d'apprentissage profond pour prédire les coordonnées futures des ouragans
+* **Prédiction de durée** : Estimation de la durée de vie des ouragans basée sur leurs caractéristiques initiales
+* **Chatbot d'assistance** : Système intelligent fournissant des conseils de sécurité en temps réel
+* **Analyse comparative** : Évaluation de multiples architectures de modèles (LSTM, BiLSTM, CNN+LSTM, etc.)
+* **Optimisation avancée** : Tests de différents optimiseurs, tailles de batch, et stratégies de normalisation
+
+Technologies utilisées
+----------------------
+
+* **Apprentissage automatique** : TensorFlow/Keras, XGBoost
+* **Traitement du langage naturel** : SentenceTransformers, FAISS
+* **Visualisation** : Matplotlib, visualisations de trajectoires
+* **Source de données** : CMA Tropical Cyclone Data Center
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: Table of Contents:
 
-   introduction
-   usage
+   installation
+   quickstart
    api
+   models
+   data_processing
+   visualization
+   architecture
+   deploiement
+   notebooks
+   chatbot
+   depannage
    contributing
+   changelog
 
-Introduction
-------------
-AI Tornado Chaser is a machine learning project focused on analyzing and forecasting tornado events using time series data. It provides Jupyter Notebooks for data exploration, model development, and an API for making predictions.
+Indices et tables
+=================
 
-Features
---------
-- Data loading, cleaning, and preprocessing
-- Exploratory data analysis and visualization
-- Model training and evaluation (LSTM, BiLSTM, XGBoost, and more)
-- Model selection and comparison
-- API for serving predictions using Flask
-
-Project Structure
------------------
-- ``final_times_series_project.ipynb``: Main notebook for data processing, model selection, and evaluation. Includes:
-  - Data import and normalization
-  - Sequence creation for time series
-  - Model training (LSTM, BiLSTM, MLP, etc.)
-  - Model evaluation and comparison
-  - Saving scalers and models for later use
-- ``API.ipynb``: Example Flask API to serve model predictions. Includes:
-  - Loading trained models and scalers
-  - REST endpoint for predictions
-  - Example usage for integrating with other applications
-- ``time_series_model_1.ipynb``: Additional data analysis and modeling. Includes:
-  - Data exploration and visualization
-  - Feature engineering
-  - XGBoost regression modeling
-- ``README.md``: Quick reference and project summary
-
-Setup Instructions
-------------------
-1. Install Python 3.8 or higher.
-2. Install dependencies:
-   - Open a terminal in the project directory.
-   - Run: ``pip install -r docs/requirements.txt``
-3. (Optional) If using Google Colab, mount your Google Drive and adjust file paths as needed.
-4. Open the notebooks in Jupyter or VS Code.
-
-Usage Guide
------------
-- Start with ``final_times_series_project.ipynb`` to explore the data, preprocess, and train models.
-- Use ``time_series_model_1.ipynb`` for additional analysis and feature engineering.
-- After training, use ``API.ipynb`` as a template to deploy your model for predictions via a REST API.
-- Adjust parameters, experiment with different models, and compare results.
-
-API Overview
-------------
-- The API notebook demonstrates how to serve predictions from a trained model using Flask.
-- Example endpoint: ``/predict`` (POST)
-- Input: JSON with time series data
-- Output: JSON with predicted sequence
-- To run the API: execute the notebook or export the code to a Python script and run it with Python.
-
-Best Practices
---------------
-- Always normalize or scale your input data using the same scaler as during training.
-- Save your trained models and scalers for reproducibility.
-- Evaluate multiple models to select the best performer.
-- Document your experiments and results in the notebooks.
-
-Contributing
-------------
-- Fork the repository and create a new branch for your feature or bugfix.
-- Submit a pull request with a clear description of your changes.
-- For questions or support, refer to the ``README.md`` or open an issue in your repository platform.
-
-Contact
--------
-For further information, please refer to the ``README.md`` or contact the project maintainer via the repository platform.
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
