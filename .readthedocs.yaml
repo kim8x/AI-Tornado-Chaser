@@ -11,22 +11,20 @@ build:
   tools:
     python: "3.8"
   jobs:
-    post_create_environment:
-      # Install poetry and dependencies
-      - pip install --upgrade --no-cache-dir pip setuptools wheel
-      - pip install --upgrade --no-cache-dir sphinx sphinx-rtd-theme nbsphinx
-      
+    pre_build:
+      - pip install --upgrade pip setuptools wheel
+      - pip install sphinx sphinx-rtd-theme nbsphinx
+
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
   configuration: docs/conf.py
+  builder: html
   fail_on_warning: false
 
-# Optionally build your docs in additional formats such as PDF and ePub
-formats:
-  - pdf
-  - epub
+# Don't build any extra formats
+formats: []
 
-# Optionally declare the Python requirements required to build your docs
+# Declare the Python requirements required to build your docs
 python:
-   install:
-      - requirements: docs/requirements.txt
+  install:
+    - requirements: docs/requirements.txt
